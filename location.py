@@ -18,7 +18,7 @@ def crawl_store():
     ret = []
     for pref in range(47):
         r = requests.get(
-            "https://location.am-all.net/alm/location?gm=58&ct=1000&at="+str(pref))
+            "https://location.am-all.net/alm/location?gm=109&ct=1000&at="+str(pref))
         soup = BeautifulSoup(r.text, 'html.parser')
         name = [a.text for a in soup.find_all(class_='store_name')]
         address = [a.text for a in soup.find_all(class_='store_address')]
